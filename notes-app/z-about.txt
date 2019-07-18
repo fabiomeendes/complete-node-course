@@ -1,5 +1,11 @@
+to run: node archiveName.js
+
 npm init -y
 
 npm i validator@10.8.0
 
 npm i chalk@2.4.1
+
+npm i nodemon@1.18.5 -g
+
+to run now: npm start
