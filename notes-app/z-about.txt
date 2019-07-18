@@ -1,1 +1,4 @@
 npm init -y
+
+npm i validator@10.8.0
+
