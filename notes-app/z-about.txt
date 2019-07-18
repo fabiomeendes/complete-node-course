@@ -9,3 +9,8 @@ npm i chalk@2.4.1
 npm i nodemon@1.18.5 -g
 
 to run now: npm start
+
+npm i yargs@12.0.2
+node app.js add --titile="Things to buy"
+node app.js --help
+ex: node app.js list
