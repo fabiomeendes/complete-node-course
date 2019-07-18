@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.writeFileSync('notes.txt', 'My name is Fábio.');
+// fs.writeFileSync('notes.txt', 'My name is Fábio.');
 
 fs.appendFileSync('notes.txt', ' I live in São Paulo.', 'utf8');
 
