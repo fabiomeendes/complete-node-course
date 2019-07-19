@@ -1,8 +1,7 @@
 const request = require('request');
 
-const url = 'https://api.darksky.net/forecast/20a2f27a213aa1fe82fa41dcfb5ccb3e/37.8267,-122.4233';
+const url = 'https://api.darksky.net/forecast/20a2f27a213aa1fe82fa41dcfb5ccb3e/-23.5506984,-46.7743679?units=si&lang=pt';
 
-request({ url }, (error, response) => {
-  const data = JSON.parse(response.body);
-  console.log(data.currently);
+request({ url, json: true }, (error, response) => {
+  console.log(`${response.body.daily.data[0].summary} - ${response.body.currently.temperature}`);
 });
