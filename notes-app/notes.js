@@ -26,6 +26,17 @@ const saveNotes = function (notes) {
   fs.writeFileSync('notes.json', dataJSON);
 }
 
+const removeNote = function (title) {
+  const notes = loadNotes();
+  const notesToKeep = notes.filter(x => x.title !== title);
+  if (notes.length > notesToKeep.length) {
+    saveNotes(notesToKeep);
+    console.log(chalk.green.inverse('Note removed!'));
+    console.log(`Title: ${title}`);
+  } else {
+    console.log(chalk.red.inverse('Note already remove or don´t exist!'));
+  }
+}
 
 const loadNotes = function () {
   try {
@@ -41,4 +52,5 @@ const loadNotes = function () {
 module.exports = {
   getNotes,
   addNote,
+  removeNote,
 };
