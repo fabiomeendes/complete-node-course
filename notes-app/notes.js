@@ -7,7 +7,7 @@ const getNotes = function() {
 
 const addNote = (title, content) => {
   const notes = loadNotes();
-  if (notes.filter(x => x.title === title).length === 0) {
+  if (!notes.find(x => x.title === title)) {
     notes.push({
       title,
       content
