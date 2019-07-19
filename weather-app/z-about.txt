@@ -1,3 +1,6 @@
 npm init -y
 
 npm i request@2.88.0
+
+https://darksky.net/dev/account - weather
+https://docs.mapbox.com/api/search/ - geolocation
