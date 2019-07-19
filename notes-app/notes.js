@@ -21,10 +21,7 @@ const addNote = (title, content) => {
   }
 };
 
-const saveNotes = (notes) => {
-  const dataJSON = JSON.stringify(notes);
-  fs.writeFileSync('notes.json', dataJSON);
-}
+
 
 const removeNote = (title) => {
   const notes = loadNotes();
@@ -36,6 +33,19 @@ const removeNote = (title) => {
   } else {
     console.log(chalk.red.inverse('Note already remove or don´t exist!'));
   }
+}
+
+const listNotes = () => {
+  const notes = loadNotes();
+  console.log(chalk.green.inverse('Your notes'));
+  return notes.map(x => {
+    console.log(x.title);
+  });
+}
+
+const saveNotes = (notes) => {
+  const dataJSON = JSON.stringify(notes);
+  fs.writeFileSync('notes.json', dataJSON);
 }
 
 const loadNotes = () => {
@@ -53,4 +63,5 @@ module.exports = {
   getNotes,
   addNote,
   removeNote,
+  listNotes,
 };
