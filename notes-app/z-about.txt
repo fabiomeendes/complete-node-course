@@ -14,3 +14,12 @@ npm i yargs@12.0.2
 node app.js add --title="t" --content="b"
 node app.js --help
 node app.js list
+
+to debug
+chrome://inspect
+node inspect app.js add --title="t" --content="c" or node --inspect-brk app.js add --title="t" --content="c"
+inspect on Remote Target
+add folder to workspace
+allow
+f8 ou blue button
+now you can see on scope -> local and use the Console
