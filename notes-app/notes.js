@@ -21,8 +21,6 @@ const addNote = (title, content) => {
   }
 };
 
-
-
 const removeNote = (title) => {
   const notes = loadNotes();
   const notesToKeep = notes.filter(x => x.title !== title);
@@ -41,6 +39,16 @@ const listNotes = () => {
   return notes.map(x => {
     console.log(x.title);
   });
+}
+
+const readNote = (title) => {
+  const note = loadNotes().find(x => x.title === title);
+  if (note) {
+    console.log(chalk.inverse(note.title));
+    console.log(note.content);
+  } else {
+    console.log(chalk.red.inverse('Note not found!'));
+  }
 }
 
 const saveNotes = (notes) => {
@@ -64,4 +72,5 @@ module.exports = {
   addNote,
   removeNote,
   listNotes,
+  readNote,
 };
