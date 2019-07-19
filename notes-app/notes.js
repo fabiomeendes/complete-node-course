@@ -5,7 +5,7 @@ const getNotes = function() {
   return 'Your notes...'
 };
 
-const addNote = function (title, content) {
+const addNote = (title, content) => {
   const notes = loadNotes();
   if (notes.filter(x => x.title === title).length === 0) {
     notes.push({
@@ -21,12 +21,12 @@ const addNote = function (title, content) {
   }
 };
 
-const saveNotes = function (notes) {
+const saveNotes = (notes) => {
   const dataJSON = JSON.stringify(notes);
   fs.writeFileSync('notes.json', dataJSON);
 }
 
-const removeNote = function (title) {
+const removeNote = (title) => {
   const notes = loadNotes();
   const notesToKeep = notes.filter(x => x.title !== title);
   if (notes.length > notesToKeep.length) {
@@ -38,7 +38,7 @@ const removeNote = function (title) {
   }
 }
 
-const loadNotes = function () {
+const loadNotes = () => {
   try {
     const dataBuffer = fs.readFileSync('notes.json');
     const dataJSON = dataBuffer.toString();
