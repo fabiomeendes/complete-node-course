@@ -1,0 +1,5 @@
+install heroku cli in your machine
+
+npm install -g heroku
+
+heroku login -> space -> click login
