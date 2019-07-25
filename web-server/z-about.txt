@@ -7,3 +7,10 @@ npm i hbs@4.0.1
 nodemon src/app.js -e js,hbs
 
 npm i request@2.88.0
+
+to Deploy 9. 67.
+heroku keys:add
+y
+heroku create fabio-weather-application
+git remote
+git push heroku master
