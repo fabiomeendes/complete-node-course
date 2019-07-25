@@ -12,5 +12,6 @@ to Deploy 9. 67.
 heroku keys:add
 y
 heroku create fabio-weather-application
+heroku git:remote -a fabio-weather-application
 git remote
 git push heroku master
