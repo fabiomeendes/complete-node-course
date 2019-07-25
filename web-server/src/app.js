@@ -40,8 +40,14 @@ app.get('/help', (req, res) => {
 });
 
 app.get('/weather', (req, res) => {
+  const { address } = req.query;
+  if (!address) {
+    return res.send({
+      error: 'You must provide an address!'
+    });
+  }
   res.send({
-    location: 'Philadelphia',
+    location: address,
     forecast: 'Snow',
   });
 });
