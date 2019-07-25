@@ -46,6 +46,22 @@ app.get('/weather', (req, res) => {
   });
 });
 
+app.get('/help/*', (req, res) => { // must come first
+  res.render('404', {
+    title: '404',
+    name: 'Fabio Camillo',
+    errorMessage: 'Help article not found',
+  });
+});
+
+app.get('*', (req, res) => {
+  res.render('404', {
+    title: '404',
+    name: 'Fabio Camillo',
+    errorMessage: 'Page not found',
+  });
+});
+
 app.listen(3000, () => {
   console.log('Server listening on 3000 port!');
 });
