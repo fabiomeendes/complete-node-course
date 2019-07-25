@@ -4,6 +4,14 @@ body {
   max-width: 50%;
   margin: 0 auto;
   padding: 0 15px;
+
+  display: flex; /* Enable flexbox */
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
 }
 
 footer {
@@ -29,6 +37,6 @@ header a {
   text-decoration: none;
 }
 
-img {
+.portrait {
   width: 200px;
 }

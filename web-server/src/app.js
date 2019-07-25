@@ -19,7 +19,7 @@ app.use(express.static(publicDirectoryPath));
 
 app.get('', (req, res) => {
   res.render('index', {
-    title: 'Weather App!',
+    title: 'Weather',
     name: 'Fábio Camillo',
   });
 });
@@ -34,7 +34,7 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
   res.render('help', {
     helpText: 'Help Text',
-    title: 'Help Page',
+    title: 'Help',
     name: 'Fabio Camillo',
   });
 });
@@ -50,7 +50,7 @@ app.get('/help/*', (req, res) => { // must come first
   res.render('404', {
     title: '404',
     name: 'Fabio Camillo',
-    errorMessage: 'Help article not found',
+    errorMessage: 'Help article not found!',
   });
 });
 
@@ -58,7 +58,7 @@ app.get('*', (req, res) => {
   res.render('404', {
     title: '404',
     name: 'Fabio Camillo',
-    errorMessage: 'Page not found',
+    errorMessage: 'Page not found!',
   });
 });
 
