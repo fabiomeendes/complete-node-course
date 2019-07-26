@@ -13,3 +13,5 @@ npm i mongodb@3.1.10
 https://docs.mongodb.com/ecosystem/drivers/node/
 
 npm i mongoose@5.3.16
+
+npm i validator@10.9.0
