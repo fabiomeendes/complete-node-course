@@ -15,3 +15,7 @@ https://docs.mongodb.com/ecosystem/drivers/node/
 npm i mongoose@5.3.16
 
 npm i validator@10.9.0
+
+npm i nodemon@1.18.9 --save-dev
+
+npm i express@4.16.4
