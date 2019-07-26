@@ -20,6 +20,26 @@ app.post('/users', (req, res) => {
   });
 });
 
+app.get('/users', (req, res) => {
+  User.find({}).then(users => {
+    res.status(200).send(users);
+  }).catch(e => {
+    res.status(500).send(e);
+  });
+});
+
+app.get('/users/:id', (req, res) => {
+  const { id: _id } = req.params;
+  User.findById({ _id }).then(user => {
+    if (!user) {
+      return res.status(404).send('User not found');
+    }
+    res.status(200).send(user);
+  }).catch(e => {
+    res.status(500).send(e);
+  });
+});
+
 app.post('/tasks', (req, res) => {
   const user = new Task(req.body);
   user.save().then(result => {
@@ -29,6 +49,26 @@ app.post('/tasks', (req, res) => {
       errorMessage: e.message,
       errorComplete: e
     });
+  });
+});
+
+app.get('/tasks', (req, res) => {
+  Task.find({}).then(tasks => {
+    res.status(200).send(tasks);
+  }).catch(e => {
+    res.status(500).send(e);
+  });
+});
+
+app.get('/tasks/:id', (req, res) => {
+  const { id: _id } = req.params;
+  Task.findById({ _id }).then(task => {
+    if (!task) {
+      return res.status(404).send('Task not found');
+    }
+    res.status(200).send(task);
+  }).catch(e => {
+    res.status(500).send(e);
   });
 });
 
