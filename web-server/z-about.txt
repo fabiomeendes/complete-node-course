@@ -15,3 +15,6 @@ heroku create fabio-weather-application
 heroku git:remote -a fabio-weather-application
 git remote
 git push heroku master
+
+npm uninstall -g nodemon
+npm install nodemon --save-dev
