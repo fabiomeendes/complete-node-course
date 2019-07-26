@@ -1,0 +1,13 @@
+install mongodb
+install robo 3t
+
+in a terminal -> "C:/ArquivosdeProgramas/MongoDB/Server/4.0/bin/mongod.exe --dbpath=/C:/ArquivosdeProgramas/MongoDBData"
+https://docs.mongodb.com/v3.2/tutorial/install-mongodb-on-windows/
+
+Crate a folder "task-manager"
+In an other terminal
+npm init
+
+npm i mongodb@3.1.10
+
+https://docs.mongodb.com/ecosystem/drivers/node/
