@@ -7,13 +7,14 @@ const taskRouter = require('./routers/task');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use((req, res, next) => {
-  // if (req.method === 'POST' || req.method === 'GET' || req.method === 'PATCH' || req.method === 'DELETE') {
-  res.status(503).send('MAINTENANCE SERVER')
-  // } else {
-  //   next();
-  // }
-})
+// app.use((req, res, next) => {
+//   // if (req.method === 'POST' || req.method === 'GET' || req.method === 'PATCH' || req.method === 'DELETE') {
+//   res.status(503).send('MAINTENANCE SERVER')
+//   // } else {
+//   //   next();
+//   // }
+// })
+
 app.use(express.json());
 app.use(userRouter);
 app.use(taskRouter);
