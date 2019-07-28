@@ -19,3 +19,5 @@ npm i validator@10.9.0
 npm i nodemon@1.18.9 --save-dev
 
 npm i express@4.16.4
+
+npm i bcryptjs@2.4.3
