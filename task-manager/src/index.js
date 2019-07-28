@@ -39,7 +39,7 @@ app.get('/users/:id', async (req, res) => {
     }
     res.status(200).send(user);
   } catch (e) {
-    res.status(500).send(e);
+    res.status(500).send();
   }
 });
 
@@ -55,11 +55,11 @@ app.patch('/users/:id', async (req, res) => {
     // new return the new user updated
     // runValidator validate properties according the model
     if (!user) {
-      return res.status(404).send();
+      return res.status(404).send('User not found');
     }
     res.status(200).send(user);
   } catch (e) {
-    res.status(400).send(e);
+    res.status(400).send();
   }
 });
 
@@ -71,7 +71,7 @@ app.delete('/users/:id', async (req, res) => {
     }
     res.send(user);
   } catch (e) {
-    res.status(500).send(e);
+    res.status(500).send();
   }
 });
 
@@ -106,7 +106,7 @@ app.get('/tasks/:id', async (req, res) => {
     }
     res.status(200).send(task);
   } catch (e) {
-    res.status(500).send(e);
+    res.status(500).send();
   }
 });
 
@@ -124,7 +124,7 @@ app.patch('/tasks/:id', async (req, res) => {
     }
     res.status(200).send(task);
   } catch (e) {
-    res.status(400).send(e);
+    res.status(400).send();
   }
 });
 
@@ -136,7 +136,7 @@ app.delete('/tasks/:id', async (req, res) => {
     }
     res.send(task);
   } catch (e) {
-    res.status(500).send(e);
+    res.status(500).send();
   }
 });
 
