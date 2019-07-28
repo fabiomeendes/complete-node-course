@@ -21,3 +21,5 @@ npm i nodemon@1.18.9 --save-dev
 npm i express@4.16.4
 
 npm i bcryptjs@2.4.3
+
+npm i jsonwebtoken@8.4.0
