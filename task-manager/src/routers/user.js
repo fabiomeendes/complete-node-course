@@ -136,7 +136,6 @@ router.delete('/users/me', auth, async (req, res) => {
   }
 });
 
-
 const upload = multer({
   dest: 'avatars'
 });
