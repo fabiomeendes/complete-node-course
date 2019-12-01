@@ -32,6 +32,7 @@ const upload = multer({
     if (!file.originalname.match(/\.(doc|docx)$/)) {
       return cb(new Error('Please upload a Word document.'));
     }
+    // https://regex101.com/
 
     cb(undefined, true);
   }
