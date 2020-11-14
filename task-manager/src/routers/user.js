@@ -137,7 +137,6 @@ router.delete('/users/me', auth, async (req, res) => {
 });
 
 const upload = multer({
-  dest: 'avatars',
   limits: {
     fileSize: 1000000 // 1MB      
   },
@@ -150,8 +149,18 @@ const upload = multer({
   }
 });
 
-// uploadX igual o que deve estar no postman/insomnia
-router.post('/users/me/avatar', upload.single('uploadX'), (req, res) => {
+// avatarProp igual o que deve estar no postman/insomnia
+router.post('/users/me/avatar', auth, upload.single('avatarProp'), async (req, res) => {
+  req.user.avatarImg = req.file.buffer;
+  await req.user.save();
+  res.send();
+}, (error, req, res, next) => {
+  res.status(400).send({ error: error.message });
+});
+
+router.delete('/users/me/avatar', auth, async (req, res) => {
+  req.user.avatarImg = undefined;
+  await req.user.save();
   res.send();
 }, (error, req, res, next) => {
   res.status(400).send({ error: error.message });
