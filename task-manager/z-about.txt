@@ -24,7 +24,9 @@ npm i bcryptjs@2.4.3
 
 npm i jsonwebtoken@8.4.0
 
+npm i sharp@0.21.1
+
 ====================================================================================
 
 To run:
-npm run rev
+npm run dev
