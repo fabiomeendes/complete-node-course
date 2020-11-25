@@ -7,8 +7,21 @@ const sendWelcomeEmail = (email, name) => {
         to: email,
         from: 'fabiocamillo@outlook.com',
         subject: 'Thanks for joining in!',
-        text: `Hello ${name}. Welcome to the app!`
+        text: `Hello ${name}. Welcome to the app!`,
+        html: '<p>Teste!!!!!!</p>'
     });
 }
 
-module.exports
+const sendCancelationEmail = (email, name) => {
+    sgMail.send({
+        to: email,
+        from: 'fabiocamillo@outlook.com',
+        subject: 'Sorry to see you go',
+        text: `Goodbye ${name}. Thanks for use the app!`
+    });
+}
+
+module.exports = {
+    sendWelcomeEmail,
+    sendCancelationEmail
+};
