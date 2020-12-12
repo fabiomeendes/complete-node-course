@@ -28,7 +28,12 @@ npm i sharp@0.21.1
 
 npm i @sendgrid/mail@6.3.1
 
+npm i env-cmd@8.0.2 --save-dev
+
 ====================================================================================
 
 To run:
 npm run dev
+
+To database:
+Use Robo 3T
