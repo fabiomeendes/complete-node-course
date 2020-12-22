@@ -32,6 +32,8 @@ npm i env-cmd@8.0.2 --save-dev
 
 npm i jest@23.6.0 --save-dev
 
+npm i supertest@3.4.1 --save-dev
+
 ====================================================================================
 
 To run:
