@@ -39,5 +39,8 @@ npm i supertest@3.4.1 --save-dev
 To run:
 npm run dev
 
+To run test:
+npm run test
+
 To database:
 Use Robo 3T
