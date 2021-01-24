@@ -40,7 +40,7 @@ To run:
 npm run dev
 
 To run test:
-npm run test
+npm test
 
 To database:
 Use Robo 3T
